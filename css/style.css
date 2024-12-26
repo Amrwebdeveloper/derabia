@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+
+:root {
+    --r: max(1vw, 1vh)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .25s;
+}
+
+body {
+    background: radial-gradient(circle, #1e8eb5, #007baf, #0066a6, #00519a, #223b8a) no-repeat center fixed;
+    background-size: cover;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(var(--r) * 60);
+    gap: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    animation: logo_all_2 .5s 2.25s ease-in-out forwards;
+}
+
+@keyframes logo_all_2 {
+    100% {
+        transform: translate(-50%, -50%) scale(.3);
+        top: max(5vh,30px);
+    }
+}
+
+
+#logo svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: calc(var(--r) * 9);
+    height: calc(var(--r) * 9);
+    animation: logo_svg .5s 1.5s ease-in-out forwards;
+}
+
+@keyframes logo_svg {
+    100% {
+        left: 9%;
+    }
+}
+
+#logo svg path.d {
+    d: path("M 88 88 h 81.99 c 167.79 -2.88 172.99 234.28 2.51 232.41 H 22.01 s 0 -298.41 0 -298.41 h 364.1 v 364.44 l -234.13 -0.06 v -234.44");
+    fill: rgba(0, 0, 0, 0);
+    stroke: #fff;
+    stroke-linecap: square;
+    stroke-miterlimit: 10;
+    stroke-width: 44px;
+    stroke-dasharray: 2200;
+    stroke-dashoffset: 2200;
+    filter: drop-shadow(0 0 3px #223b8a);
+    animation: logo_d 1s .5s ease-in-out forwards;
+}
+
+@keyframes logo_d {
+    100% {
+        stroke-dashoffset: 4400;
+    }
+}
+
+
+#logo svg rect.s {
+    x: 110;
+    y: 66;
+    width: 44px;
+    height: 44px;
+    fill: rgba(0, 0, 0, 0);
+}
+
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: "Alexandria";
+    color: #fff;
+    overflow: hidden;
+    width: calc(var(--r) * 38.5);
+    height: calc(var(--r) * 10);
+    opacity: 0;
+    position: absolute;
+    animation: logo_logo .1s 1s ease-in-out forwards;
+}
+
+@keyframes logo_logo {
+    100% {
+        position: relative;
+        opacity: 1;
+    }
+}
+
+.logo .logo-name {
+    font-size: calc(var(--r) * 7.8);
+    font-weight: 900;
+    line-height: calc(var(--r) * 7);
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    text-shadow: 0 0 5px #223b8a;
+    animation: logo_name .75s 1.5s ease-in-out forwards;
+}
+
+@keyframes logo_name {
+    100% {
+        left: 0;
+    }
+}
+
+.logo .logo-slogan {
+    text-transform: capitalize;
+    font-size: calc(var(--r) * 2.7343749);
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    text-shadow: 0 0 3px #223b8a;
+    animation: logo_slogan .5s 1.75s ease-in-out forwards;
+}
+
+@keyframes logo_slogan {
+    100% {
+        bottom: 0;
+    }
+}
